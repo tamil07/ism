@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+
+   dellism:
+     image: tamilarasanbravo/ism2.4 
+     network_mode: "host"
+     volumes:
+       - /sys/fs/cgroup:/sys/fs/cgroup
+     privileged: true
+     restart: always
+     command: sh -c "/usr/sbin/init"
+
